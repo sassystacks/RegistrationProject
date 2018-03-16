@@ -9,8 +9,8 @@ class getImageData:
         # Takes in an argument of a directory and optional filename to load image
         # directory to look in for the data set
         try:
-            self.directory = os.path.join(kwargs['directory'], kwargs['filename'])
-            chkFtype = self.directory
+            self.directory = os.path.join(kwargs['directory'])
+            chkFtype = kwargs['filename']
         except:
             self.directory = os.path.join(kwargs['directory'])
             # Read first file in the directory and Determine if it is a DICOM type or NIFTI type folder
@@ -31,18 +31,18 @@ class getImageData:
             self.ftype = 'OBJ'
             self.reader = self.readOBJECT(chkFtype)
 
-        elif chkFtpe.endswith(".stl"):
+        elif chkFtype.endswith(".stl"):
             self.ftype = 'STL'
             self.reader = self.readSTL(chkFtype)
 
         else:
+            print(chkFtype)
             print("The folder specified won't work with this application")
-            exit()
 
     def readSTL(self, *args):
 
         reader = vtk.vtkSTLReader()
-        reader.setFileName(os.path.join(self.director, args[0]))
+        reader.SetFileName(os.path.join(self.directory, args[0]))
         reader.Update()
 
         return reader

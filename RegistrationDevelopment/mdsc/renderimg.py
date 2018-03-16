@@ -38,24 +38,34 @@ class actorimg3d:
     ~~~~~~~~~~~~~~~~~~~~~~~~   Surface Rendering    ~~~~~~~~~~~~~~~~~~~~~~~~
     '''
 
-    def getActors(self, dataList, propList=[{'opacity': 1, 'r': 0.1, 'g': 0.1, 'b': 0.6},
-                                            {'opacity': 1, 'r': 1, 'g': 0.2, 'b': 1}]):
+    def surfaceActor(self, reader, threshlist, op, lookupvals):
+        print("Upper threshold is {} and lower threshold is {} ...").format(
+            threshlist[0], threshlist[1])
+        # This function returns a vtkActor ready to be displayed
+        # takes a reader and upper and lower threshold values from an instance of this class.
+        # Applies a gauss filter, Then renders two overlaid images based on the
+        # threshold values : [<lower>,<upper>]
+        # input : vtk object (reader), list of values
 
-        actorList = []
-        # loop through all the data sets passed to function
-        for i, t in enumerate(dataList):
-            mapper = ri.mapperFuncs().getPolyDataMap(t)  # call method from precious assignment
+        imgData = reader.GetOutput()
+        filterimg = self.applyGauss(reader)
+        filterimgData = filterimg.GetOutput()  # get the output from filterimg
 
-            # initialize actor and set properties
-            actor = vtk.vtkActor()
-            actor.GetProperty().SetOpacity(propList[i]['opacity'])
-            actor.GetProperty().SetColor(propList[i]['r'],
-                                         propList[i]['g'],
-                                         propList[i]['b'])
-            actor.SetMapper(mapper)  # create new actor
+        # Return binary thresholded images as a vtk object
+        segmentimgData = self.applyVTKthreshold(filterimg, threshlist[0], threshlist[1])
 
-            actorList.append(actor)
-        return actorList  # return list of actors
+        surfaceReader = self.applyDiscreteMarchingCubes(segmentimgData)
+
+        mapper = vtk.vtkPolyDataMapper()
+        mapper.SetLookupTable(self.binaryLookupTable(lookupvals))
+        mapper.SetInputConnection(surfaceReader.GetOutputPort())
+
+        actor = vtk.vtkActor()
+        actor.SetMapper(mapper)
+
+        self.displayVolume([actor1, actor2])  # Need to remove
+
+        return actor
 
     '''
     ~~~~~~~~~~~~~~~~~~~~~~~~    Volume Rendering   ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -75,6 +85,27 @@ class actorimg3d:
         actor = self.volumeRender(segementedimg, tf=tf, spacing=filterimgData.GetSpacing())
 
         return actor
+
+    def getActors(self, dataList, propList=[]):
+        # properties to be passe for visualization
+        # propList = [{'opacity': 1, 'r': 0.1, 'g': 0.1, 'b': 0.6},
+        #             {'opacity': 1, 'r': 1, 'g': 0.2, 'b': 1}]
+
+        actorList = []
+        # loop through all the data sets passed to function
+        for i, t in enumerate(dataList):
+            mapper = mapperFuncs().getPolyDataMap(t)  # call method from precious assignment
+
+            # initialize actor and set properties
+            actor = vtk.vtkActor()
+            actor.GetProperty().SetOpacity(propList[i]['opacity'])
+            actor.GetProperty().SetColor(propList[i]['r'],
+                                         propList[i]['g'],
+                                         propList[i]['b'])
+            actor.SetMapper(mapper)  # create new actor
+
+            actorList.append(actor)
+        return actorList  # return list of actors
 
     def volumeRender(self, imgData, tf, spacing=[1.0, 1.0, 1.0]):
         # Returns a list of actors to be visualized based on a numpy array and image input
