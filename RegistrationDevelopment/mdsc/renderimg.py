@@ -86,7 +86,7 @@ class actorimg3d:
 
         return actor
 
-    def getActors(self, dataList, propList=[]):
+    def getActors(self, dataList, propdict=[]):
         # properties to be passe for visualization
         # propList = [{'opacity': 1, 'r': 0.1, 'g': 0.1, 'b': 0.6},
         #             {'opacity': 1, 'r': 1, 'g': 0.2, 'b': 1}]
@@ -98,10 +98,11 @@ class actorimg3d:
 
             # initialize actor and set properties
             actor = vtk.vtkActor()
-            actor.GetProperty().SetOpacity(propList[i]['opacity'])
-            actor.GetProperty().SetColor(propList[i]['r'],
-                                         propList[i]['g'],
-                                         propList[i]['b'])
+            if propdict:
+                actor.GetProperty().SetOpacity(propdict[i]['opacity'])
+                actor.GetProperty().SetColor(propdict[i]['r'],
+                                             propdict[i]['g'],
+                                             propdict[i]['b'])
             actor.SetMapper(mapper)  # create new actor
 
             actorList.append(actor)
