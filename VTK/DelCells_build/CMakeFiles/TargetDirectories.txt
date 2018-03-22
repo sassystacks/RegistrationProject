@@ -1,0 +1,3 @@
+/home/richard/MyProjects/Tutorials/VTK/DelCells_build/CMakeFiles/rebuild_cache.dir
+/home/richard/MyProjects/Tutorials/VTK/DelCells_build/CMakeFiles/DeleteCells.dir
+/home/richard/MyProjects/Tutorials/VTK/DelCells_build/CMakeFiles/edit_cache.dir
