@@ -35,9 +35,21 @@ class getImageData:
             self.ftype = 'STL'
             self.reader = self.readSTL(chkFtype)
 
+        elif chkFtype.endswith(".vtk"):
+            self.ftype = 'VTK'
+            self.reader = self.readVTK(chkFtype)
+
         else:
             print(chkFtype)
             print("The folder specified won't work with this application")
+
+    def readVTK(self, *args):
+
+        reader = vtk.vtkStructuredPointsReader()
+        reader.SetFileName(os.path.join(self.directory, args[0]))
+        reader.Update()
+
+        return reader
 
     def readSTL(self, *args):
 

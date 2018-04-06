@@ -143,7 +143,7 @@ class processImageData:
         return filterImg
 
     '''
-    ~~~~~~~~~~~~~~~~~~~ Functions Below Manipulate vtk objects ~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~ Filters ~~~~~~~~~~~~~~~~~~~~~
     '''
 
     def applyMedianFilterVTK(self, imgData, kern=[3, 3, 3]):
@@ -167,6 +167,22 @@ class processImageData:
         filterImg.Update()
 
         return filterImg  # return vtk object type
+
+    def applySmoothPolyFilter(self, imgData, iternum, relax):
+
+        smoothFilter = vtk.vtkSmoothPolyDataFilter()
+        smoothFilter.SetInputData(imgData.GetOutput())
+        smoothFilter.SetNumberOfIterations(iternum)
+        smoothFilter.SetRelaxationFactor(relax)
+        smoothFilter.FeatureEdgeSmoothingOff()
+        smoothFilter.BoundarySmoothingOn()
+        smoothFilter.Update
+
+        return smoothFilter
+
+    '''
+    ~~~~~~~~~~~~~~~~~~~ Process Image ~~~~~~~~~~~~~~~~~~~~~~~~
+    '''
 
     def applyVTKthreshold(self, reader, lower, upper):
 
@@ -220,4 +236,4 @@ class processImageData:
         dmc.GenerateValues(1, 1, 1)
         dmc.Update()
 
-        return dmc.GetOutput()  # vtkPolyData
+        return dmc  # vtkPolyData
