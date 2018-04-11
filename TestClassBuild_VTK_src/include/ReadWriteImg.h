@@ -11,8 +11,11 @@
 #ifndef READWRITEIMG_H_
 #define READWRITEIMG_H_
 
+#include "vtkPolyData.h"
 #include "vtkSTLReader.h"
-#include <string>
+#include "vtkXMLPolyDataReader.h"
+#include "string.h"
+#include <iostream>
 
 class ReadWriteImg
 {
@@ -20,11 +23,14 @@ private:
 
 //	vtkSmartPointer<vtkSTLReader> reader; //reader
 	const char* fname; //filename for reader
+	vtkSmartPointer<vtkPolyData> pdata;
 
 public:
 	ReadWriteImg(const char*); //constructor
 	void setFname(const char* f){fname = f;}
-	vtkSmartPointer<vtkSTLReader> getReader();
+	vtkSmartPointer<vtkPolyData> getPdata(){return pdata;}
+	virtual ~ReadWriteImg();
+
 };
 
 
