@@ -27,7 +27,7 @@ include(${VTK_USE_FILE})
 #	Square.cpp /home/richard/eclipse-workspace/TestClassBuild_VTK_src/Square.h
 #	Shape.h)
 
-file(GLOB SOURCES "*.cpp")
+file(GLOB SOURCES "*.cxx")
 
 include_directories(include)
 

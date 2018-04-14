@@ -57,142 +57,194 @@ include CMakeFiles/FinalProjectMain.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/FinalProjectMain.dir/flags.make
 
-CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.o: CMakeFiles/FinalProjectMain.dir/flags.make
-CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.o: /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ApplyRegistration.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/richard/eclipse-workspace/TestClassBuild_VTK_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.o -c /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ApplyRegistration.cpp
+CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.o: CMakeFiles/FinalProjectMain.dir/flags.make
+CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.o: /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ApplyRegistration.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/richard/eclipse-workspace/TestClassBuild_VTK_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.o -c /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ApplyRegistration.cxx
 
-CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ApplyRegistration.cpp > CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.i
+CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ApplyRegistration.cxx > CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.i
 
-CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ApplyRegistration.cpp -o CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.s
+CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ApplyRegistration.cxx -o CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.s
 
-CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.o.requires:
+CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.o.requires:
 
-.PHONY : CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.o.requires
+.PHONY : CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.o.requires
 
-CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.o.provides: CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.o.requires
-	$(MAKE) -f CMakeFiles/FinalProjectMain.dir/build.make CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.o.provides.build
-.PHONY : CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.o.provides
+CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.o.provides: CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.o.requires
+	$(MAKE) -f CMakeFiles/FinalProjectMain.dir/build.make CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.o.provides.build
+.PHONY : CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.o.provides
 
-CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.o.provides.build: CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.o
-
-
-CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.o: CMakeFiles/FinalProjectMain.dir/flags.make
-CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.o: /home/richard/eclipse-workspace/TestClassBuild_VTK_src/CommandIterationUpdate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/richard/eclipse-workspace/TestClassBuild_VTK_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.o -c /home/richard/eclipse-workspace/TestClassBuild_VTK_src/CommandIterationUpdate.cpp
-
-CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/richard/eclipse-workspace/TestClassBuild_VTK_src/CommandIterationUpdate.cpp > CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.i
-
-CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/richard/eclipse-workspace/TestClassBuild_VTK_src/CommandIterationUpdate.cpp -o CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.s
-
-CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.o.requires:
-
-.PHONY : CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.o.requires
-
-CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.o.provides: CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.o.requires
-	$(MAKE) -f CMakeFiles/FinalProjectMain.dir/build.make CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.o.provides.build
-.PHONY : CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.o.provides
-
-CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.o.provides.build: CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.o
+CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.o.provides.build: CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.o
 
 
-CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.o: CMakeFiles/FinalProjectMain.dir/flags.make
-CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.o: /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ReadWriteImg.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/richard/eclipse-workspace/TestClassBuild_VTK_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.o -c /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ReadWriteImg.cpp
+CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.o: CMakeFiles/FinalProjectMain.dir/flags.make
+CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.o: /home/richard/eclipse-workspace/TestClassBuild_VTK_src/CommandIterationUpdate.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/richard/eclipse-workspace/TestClassBuild_VTK_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.o -c /home/richard/eclipse-workspace/TestClassBuild_VTK_src/CommandIterationUpdate.cxx
 
-CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ReadWriteImg.cpp > CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.i
+CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/richard/eclipse-workspace/TestClassBuild_VTK_src/CommandIterationUpdate.cxx > CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.i
 
-CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ReadWriteImg.cpp -o CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.s
+CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/richard/eclipse-workspace/TestClassBuild_VTK_src/CommandIterationUpdate.cxx -o CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.s
 
-CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.o.requires:
+CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.o.requires:
 
-.PHONY : CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.o.requires
+.PHONY : CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.o.requires
 
-CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.o.provides: CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.o.requires
-	$(MAKE) -f CMakeFiles/FinalProjectMain.dir/build.make CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.o.provides.build
-.PHONY : CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.o.provides
+CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.o.provides: CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.o.requires
+	$(MAKE) -f CMakeFiles/FinalProjectMain.dir/build.make CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.o.provides.build
+.PHONY : CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.o.provides
 
-CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.o.provides.build: CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.o
-
-
-CMakeFiles/FinalProjectMain.dir/main.cpp.o: CMakeFiles/FinalProjectMain.dir/flags.make
-CMakeFiles/FinalProjectMain.dir/main.cpp.o: /home/richard/eclipse-workspace/TestClassBuild_VTK_src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/richard/eclipse-workspace/TestClassBuild_VTK_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FinalProjectMain.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FinalProjectMain.dir/main.cpp.o -c /home/richard/eclipse-workspace/TestClassBuild_VTK_src/main.cpp
-
-CMakeFiles/FinalProjectMain.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProjectMain.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/richard/eclipse-workspace/TestClassBuild_VTK_src/main.cpp > CMakeFiles/FinalProjectMain.dir/main.cpp.i
-
-CMakeFiles/FinalProjectMain.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProjectMain.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/richard/eclipse-workspace/TestClassBuild_VTK_src/main.cpp -o CMakeFiles/FinalProjectMain.dir/main.cpp.s
-
-CMakeFiles/FinalProjectMain.dir/main.cpp.o.requires:
-
-.PHONY : CMakeFiles/FinalProjectMain.dir/main.cpp.o.requires
-
-CMakeFiles/FinalProjectMain.dir/main.cpp.o.provides: CMakeFiles/FinalProjectMain.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/FinalProjectMain.dir/build.make CMakeFiles/FinalProjectMain.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/FinalProjectMain.dir/main.cpp.o.provides
-
-CMakeFiles/FinalProjectMain.dir/main.cpp.o.provides.build: CMakeFiles/FinalProjectMain.dir/main.cpp.o
+CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.o.provides.build: CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.o
 
 
-CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.o: CMakeFiles/FinalProjectMain.dir/flags.make
-CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.o: /home/richard/eclipse-workspace/TestClassBuild_VTK_src/visualizeData.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/richard/eclipse-workspace/TestClassBuild_VTK_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.o -c /home/richard/eclipse-workspace/TestClassBuild_VTK_src/visualizeData.cpp
+CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.o: CMakeFiles/FinalProjectMain.dir/flags.make
+CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.o: /home/richard/eclipse-workspace/TestClassBuild_VTK_src/MaterialProperties.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/richard/eclipse-workspace/TestClassBuild_VTK_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.o -c /home/richard/eclipse-workspace/TestClassBuild_VTK_src/MaterialProperties.cxx
 
-CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/richard/eclipse-workspace/TestClassBuild_VTK_src/visualizeData.cpp > CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.i
+CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/richard/eclipse-workspace/TestClassBuild_VTK_src/MaterialProperties.cxx > CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.i
 
-CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/richard/eclipse-workspace/TestClassBuild_VTK_src/visualizeData.cpp -o CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.s
+CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/richard/eclipse-workspace/TestClassBuild_VTK_src/MaterialProperties.cxx -o CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.s
 
-CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.o.requires:
+CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.o.requires:
 
-.PHONY : CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.o.requires
+.PHONY : CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.o.requires
 
-CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.o.provides: CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.o.requires
-	$(MAKE) -f CMakeFiles/FinalProjectMain.dir/build.make CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.o.provides.build
-.PHONY : CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.o.provides
+CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.o.provides: CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.o.requires
+	$(MAKE) -f CMakeFiles/FinalProjectMain.dir/build.make CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.o.provides.build
+.PHONY : CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.o.provides
 
-CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.o.provides.build: CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.o
+CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.o.provides.build: CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.o
+
+
+CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o: CMakeFiles/FinalProjectMain.dir/flags.make
+CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o: /home/richard/eclipse-workspace/TestClassBuild_VTK_src/PatchData.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/richard/eclipse-workspace/TestClassBuild_VTK_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o -c /home/richard/eclipse-workspace/TestClassBuild_VTK_src/PatchData.cxx
+
+CMakeFiles/FinalProjectMain.dir/PatchData.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProjectMain.dir/PatchData.cxx.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/richard/eclipse-workspace/TestClassBuild_VTK_src/PatchData.cxx > CMakeFiles/FinalProjectMain.dir/PatchData.cxx.i
+
+CMakeFiles/FinalProjectMain.dir/PatchData.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProjectMain.dir/PatchData.cxx.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/richard/eclipse-workspace/TestClassBuild_VTK_src/PatchData.cxx -o CMakeFiles/FinalProjectMain.dir/PatchData.cxx.s
+
+CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o.requires:
+
+.PHONY : CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o.requires
+
+CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o.provides: CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o.requires
+	$(MAKE) -f CMakeFiles/FinalProjectMain.dir/build.make CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o.provides.build
+.PHONY : CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o.provides
+
+CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o.provides.build: CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o
+
+
+CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.o: CMakeFiles/FinalProjectMain.dir/flags.make
+CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.o: /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ReadWriteImg.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/richard/eclipse-workspace/TestClassBuild_VTK_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.o -c /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ReadWriteImg.cxx
+
+CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ReadWriteImg.cxx > CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.i
+
+CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ReadWriteImg.cxx -o CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.s
+
+CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.o.requires:
+
+.PHONY : CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.o.requires
+
+CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.o.provides: CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.o.requires
+	$(MAKE) -f CMakeFiles/FinalProjectMain.dir/build.make CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.o.provides.build
+.PHONY : CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.o.provides
+
+CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.o.provides.build: CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.o
+
+
+CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.o: CMakeFiles/FinalProjectMain.dir/flags.make
+CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.o: /home/richard/eclipse-workspace/TestClassBuild_VTK_src/VisualizeData.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/richard/eclipse-workspace/TestClassBuild_VTK_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.o -c /home/richard/eclipse-workspace/TestClassBuild_VTK_src/VisualizeData.cxx
+
+CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/richard/eclipse-workspace/TestClassBuild_VTK_src/VisualizeData.cxx > CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.i
+
+CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/richard/eclipse-workspace/TestClassBuild_VTK_src/VisualizeData.cxx -o CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.s
+
+CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.o.requires:
+
+.PHONY : CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.o.requires
+
+CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.o.provides: CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.o.requires
+	$(MAKE) -f CMakeFiles/FinalProjectMain.dir/build.make CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.o.provides.build
+.PHONY : CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.o.provides
+
+CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.o.provides.build: CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.o
+
+
+CMakeFiles/FinalProjectMain.dir/main.cxx.o: CMakeFiles/FinalProjectMain.dir/flags.make
+CMakeFiles/FinalProjectMain.dir/main.cxx.o: /home/richard/eclipse-workspace/TestClassBuild_VTK_src/main.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/richard/eclipse-workspace/TestClassBuild_VTK_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/FinalProjectMain.dir/main.cxx.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FinalProjectMain.dir/main.cxx.o -c /home/richard/eclipse-workspace/TestClassBuild_VTK_src/main.cxx
+
+CMakeFiles/FinalProjectMain.dir/main.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProjectMain.dir/main.cxx.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/richard/eclipse-workspace/TestClassBuild_VTK_src/main.cxx > CMakeFiles/FinalProjectMain.dir/main.cxx.i
+
+CMakeFiles/FinalProjectMain.dir/main.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProjectMain.dir/main.cxx.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/richard/eclipse-workspace/TestClassBuild_VTK_src/main.cxx -o CMakeFiles/FinalProjectMain.dir/main.cxx.s
+
+CMakeFiles/FinalProjectMain.dir/main.cxx.o.requires:
+
+.PHONY : CMakeFiles/FinalProjectMain.dir/main.cxx.o.requires
+
+CMakeFiles/FinalProjectMain.dir/main.cxx.o.provides: CMakeFiles/FinalProjectMain.dir/main.cxx.o.requires
+	$(MAKE) -f CMakeFiles/FinalProjectMain.dir/build.make CMakeFiles/FinalProjectMain.dir/main.cxx.o.provides.build
+.PHONY : CMakeFiles/FinalProjectMain.dir/main.cxx.o.provides
+
+CMakeFiles/FinalProjectMain.dir/main.cxx.o.provides.build: CMakeFiles/FinalProjectMain.dir/main.cxx.o
 
 
 # Object files for target FinalProjectMain
 FinalProjectMain_OBJECTS = \
-"CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.o" \
-"CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.o" \
-"CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.o" \
-"CMakeFiles/FinalProjectMain.dir/main.cpp.o" \
-"CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.o"
+"CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.o" \
+"CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.o" \
+"CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.o" \
+"CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o" \
+"CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.o" \
+"CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.o" \
+"CMakeFiles/FinalProjectMain.dir/main.cxx.o"
 
 # External object files for target FinalProjectMain
 FinalProjectMain_EXTERNAL_OBJECTS =
 
-FinalProjectMain: CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.o
-FinalProjectMain: CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.o
-FinalProjectMain: CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.o
-FinalProjectMain: CMakeFiles/FinalProjectMain.dir/main.cpp.o
-FinalProjectMain: CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.o
+FinalProjectMain: CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.o
+FinalProjectMain: CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.o
+FinalProjectMain: CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.o
+FinalProjectMain: CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o
+FinalProjectMain: CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.o
+FinalProjectMain: CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.o
+FinalProjectMain: CMakeFiles/FinalProjectMain.dir/main.cxx.o
 FinalProjectMain: CMakeFiles/FinalProjectMain.dir/build.make
 FinalProjectMain: /home/richard/gitSource/VTK_Release_Build/lib/libvtkIOInfovis-9.0.so.1
 FinalProjectMain: /home/richard/gitSource/VTK_Release_Build/lib/libvtkRenderingContextOpenGL2-9.0.so.1
@@ -442,7 +494,7 @@ FinalProjectMain: /usr/local/lib/libitkv3p_netlib-5.0.a
 FinalProjectMain: /usr/local/lib/libitknetlib-5.0.a
 FinalProjectMain: /usr/local/lib/libitkvcl-5.0.a
 FinalProjectMain: CMakeFiles/FinalProjectMain.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/richard/eclipse-workspace/TestClassBuild_VTK_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable FinalProjectMain"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/richard/eclipse-workspace/TestClassBuild_VTK_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable FinalProjectMain"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FinalProjectMain.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -450,11 +502,13 @@ CMakeFiles/FinalProjectMain.dir/build: FinalProjectMain
 
 .PHONY : CMakeFiles/FinalProjectMain.dir/build
 
-CMakeFiles/FinalProjectMain.dir/requires: CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.o.requires
-CMakeFiles/FinalProjectMain.dir/requires: CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.o.requires
-CMakeFiles/FinalProjectMain.dir/requires: CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.o.requires
-CMakeFiles/FinalProjectMain.dir/requires: CMakeFiles/FinalProjectMain.dir/main.cpp.o.requires
-CMakeFiles/FinalProjectMain.dir/requires: CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.o.requires
+CMakeFiles/FinalProjectMain.dir/requires: CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.o.requires
+CMakeFiles/FinalProjectMain.dir/requires: CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.o.requires
+CMakeFiles/FinalProjectMain.dir/requires: CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.o.requires
+CMakeFiles/FinalProjectMain.dir/requires: CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o.requires
+CMakeFiles/FinalProjectMain.dir/requires: CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.o.requires
+CMakeFiles/FinalProjectMain.dir/requires: CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.o.requires
+CMakeFiles/FinalProjectMain.dir/requires: CMakeFiles/FinalProjectMain.dir/main.cxx.o.requires
 
 .PHONY : CMakeFiles/FinalProjectMain.dir/requires
 

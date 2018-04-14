@@ -6,17 +6,51 @@
 
 #IncludeRegexTransform: 
 
-/home/richard/eclipse-workspace/TestClassBuild_VTK_src/ApplyRegistration.cpp
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/ApplyRegistration.cxx
 ApplyRegistration.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ApplyRegistration.h
 
-/home/richard/eclipse-workspace/TestClassBuild_VTK_src/CommandIterationUpdate.cpp
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/CommandIterationUpdate.cxx
 CommandIterationUpdate.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/CommandIterationUpdate.h
 
-/home/richard/eclipse-workspace/TestClassBuild_VTK_src/ReadWriteImg.cpp
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/MaterialProperties.cxx
+MaterialProperties.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/MaterialProperties.h
+vtkMassProperties.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkMassProperties.h
+cmath
+-
+
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/PatchData.cxx
+PatchData.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/PatchData.h
+vtkPlane.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkPlane.h
+vtkClipPolyData.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkClipPolyData.h
+vtkFillHolesFilter.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkFillHolesFilter.h
+vtkPolyDataNormals.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkPolyDataNormals.h
+iostream
+-
+vector
+-
+
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/ReadWriteImg.cxx
 ReadWriteImg.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ReadWriteImg.h
+
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/VisualizeData.cxx
+VisualizeData.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/VisualizeData.h
+vtkArrowSource.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkArrowSource.h
+vtkGlyph3D.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkGlyph3D.h
+vector
+-
 
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/ApplyRegistration.h
 itkMesh.h
@@ -54,6 +88,30 @@ iostream
 itkLevenbergMarquardtOptimizer.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/itkLevenbergMarquardtOptimizer.h
 
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/MaterialProperties.h
+vtkPolyData.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/vtkPolyData.h
+vtkMassProperties.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/vtkMassProperties.h
+
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/PatchData.h
+vtkPolyData.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/vtkPolyData.h
+vtkCellData.h
+-
+vtkDoubleArray.h
+-
+vtkFloatArray.h
+-
+vtkPoints.h
+-
+vtkPolyDataNormals.h
+-
+vtkPointData.h
+-
+vtkSmartPointer.h
+-
+
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/ReadWriteImg.h
 vtkPolyData.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/vtkPolyData.h
@@ -66,7 +124,7 @@ string.h
 iostream
 -
 
-/home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/visualizeData.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/VisualizeData.h
 vtkRenderWindow.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/vtkRenderWindow.h
 vtkPolyDataMapper.h
@@ -85,24 +143,24 @@ vtkPlane.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/vtkPlane.h
 vtkCutter.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/vtkCutter.h
+vtkPolyDataNormals.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/vtkPolyDataNormals.h
 ReadWriteImg.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/ReadWriteImg.h
 
-/home/richard/eclipse-workspace/TestClassBuild_VTK_src/main.cpp
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/main.cxx
 iostream
 -
 ReadWriteImg.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ReadWriteImg.h
-visualizeData.h
-/home/richard/eclipse-workspace/TestClassBuild_VTK_src/visualizeData.h
+VisualizeData.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/VisualizeData.h
 ApplyRegistration.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ApplyRegistration.h
-
-/home/richard/eclipse-workspace/TestClassBuild_VTK_src/visualizeData.cpp
-visualizeData.h
-/home/richard/eclipse-workspace/TestClassBuild_VTK_src/visualizeData.h
-vector
--
+PatchData.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/PatchData.h
+vtkFloatArray.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkFloatArray.h
 
 /home/richard/gitSource/VTK/Common/Core/vtkABI.h
 
@@ -169,6 +227,22 @@ vtkCommonCoreModule.h
 /home/richard/gitSource/VTK/Common/Core/vtkCommonCoreModule.h
 vtkSystemIncludes.h
 /home/richard/gitSource/VTK/Common/Core/vtkSystemIncludes.h
+
+/home/richard/gitSource/VTK/Common/Core/vtkDoubleArray.h
+vtkCommonCoreModule.h
+/home/richard/gitSource/VTK/Common/Core/vtkCommonCoreModule.h
+vtkDataArray.h
+/home/richard/gitSource/VTK/Common/Core/vtkDataArray.h
+vtkAOSDataArrayTemplate.h
+/home/richard/gitSource/VTK/Common/Core/vtkAOSDataArrayTemplate.h
+
+/home/richard/gitSource/VTK/Common/Core/vtkFloatArray.h
+vtkCommonCoreModule.h
+/home/richard/gitSource/VTK/Common/Core/vtkCommonCoreModule.h
+vtkDataArray.h
+/home/richard/gitSource/VTK/Common/Core/vtkDataArray.h
+vtkAOSDataArrayTemplate.h
+/home/richard/gitSource/VTK/Common/Core/vtkAOSDataArrayTemplate.h
 
 /home/richard/gitSource/VTK/Common/Core/vtkGenericDataArray.h
 vtkDataArray.h
@@ -476,6 +550,12 @@ vtkIdTypeArray.h
 vtkCell.h
 /home/richard/gitSource/VTK/Common/DataModel/vtkCell.h
 
+/home/richard/gitSource/VTK/Common/DataModel/vtkCellData.h
+vtkCommonDataModelModule.h
+/home/richard/gitSource/VTK/Common/DataModel/vtkCommonDataModelModule.h
+vtkDataSetAttributes.h
+/home/richard/gitSource/VTK/Common/DataModel/vtkDataSetAttributes.h
+
 /home/richard/gitSource/VTK/Common/DataModel/vtkCellLinks.h
 vtkCommonDataModelModule.h
 /home/richard/gitSource/VTK/Common/DataModel/vtkCommonDataModelModule.h
@@ -510,6 +590,20 @@ vtkCommonDataModelModule.h
 vtkDataObject.h
 /home/richard/gitSource/VTK/Common/DataModel/vtkDataObject.h
 
+/home/richard/gitSource/VTK/Common/DataModel/vtkDataSetAttributes.h
+vtkCommonDataModelModule.h
+/home/richard/gitSource/VTK/Common/DataModel/vtkCommonDataModelModule.h
+vtkFieldData.h
+/home/richard/gitSource/VTK/Common/DataModel/vtkFieldData.h
+
+/home/richard/gitSource/VTK/Common/DataModel/vtkFieldData.h
+vtkCommonDataModelModule.h
+/home/richard/gitSource/VTK/Common/DataModel/vtkCommonDataModelModule.h
+vtkObject.h
+/home/richard/gitSource/VTK/Common/DataModel/vtkObject.h
+vtkAbstractArray.h
+/home/richard/gitSource/VTK/Common/DataModel/vtkAbstractArray.h
+
 /home/richard/gitSource/VTK/Common/DataModel/vtkImplicitFunction.h
 vtkCommonDataModelModule.h
 /home/richard/gitSource/VTK/Common/DataModel/vtkCommonDataModelModule.h
@@ -521,6 +615,12 @@ vtkCommonDataModelModule.h
 /home/richard/gitSource/VTK/Common/DataModel/vtkCommonDataModelModule.h
 vtkImplicitFunction.h
 /home/richard/gitSource/VTK/Common/DataModel/vtkImplicitFunction.h
+
+/home/richard/gitSource/VTK/Common/DataModel/vtkPointData.h
+vtkCommonDataModelModule.h
+/home/richard/gitSource/VTK/Common/DataModel/vtkCommonDataModelModule.h
+vtkDataSetAttributes.h
+/home/richard/gitSource/VTK/Common/DataModel/vtkDataSetAttributes.h
 
 /home/richard/gitSource/VTK/Common/DataModel/vtkPointSet.h
 vtkCommonDataModelModule.h
@@ -562,6 +662,12 @@ vtkCommonMiscModule.h
 vtkObject.h
 /home/richard/gitSource/VTK/Common/Misc/vtkObject.h
 
+/home/richard/gitSource/VTK/Filters/Core/vtkClipPolyData.h
+vtkFiltersCoreModule.h
+/home/richard/gitSource/VTK/Filters/Core/vtkFiltersCoreModule.h
+vtkPolyDataAlgorithm.h
+/home/richard/gitSource/VTK/Filters/Core/vtkPolyDataAlgorithm.h
+
 /home/richard/gitSource/VTK/Filters/Core/vtkCutter.h
 vtkFiltersCoreModule.h
 /home/richard/gitSource/VTK/Filters/Core/vtkFiltersCoreModule.h
@@ -569,6 +675,36 @@ vtkPolyDataAlgorithm.h
 /home/richard/gitSource/VTK/Filters/Core/vtkPolyDataAlgorithm.h
 vtkContourValues.h
 /home/richard/gitSource/VTK/Filters/Core/vtkContourValues.h
+
+/home/richard/gitSource/VTK/Filters/Core/vtkGlyph3D.h
+vtkFiltersCoreModule.h
+/home/richard/gitSource/VTK/Filters/Core/vtkFiltersCoreModule.h
+vtkPolyDataAlgorithm.h
+/home/richard/gitSource/VTK/Filters/Core/vtkPolyDataAlgorithm.h
+
+/home/richard/gitSource/VTK/Filters/Core/vtkMassProperties.h
+vtkFiltersCoreModule.h
+/home/richard/gitSource/VTK/Filters/Core/vtkFiltersCoreModule.h
+vtkPolyDataAlgorithm.h
+/home/richard/gitSource/VTK/Filters/Core/vtkPolyDataAlgorithm.h
+
+/home/richard/gitSource/VTK/Filters/Core/vtkPolyDataNormals.h
+vtkFiltersCoreModule.h
+/home/richard/gitSource/VTK/Filters/Core/vtkFiltersCoreModule.h
+vtkPolyDataAlgorithm.h
+/home/richard/gitSource/VTK/Filters/Core/vtkPolyDataAlgorithm.h
+
+/home/richard/gitSource/VTK/Filters/Modeling/vtkFillHolesFilter.h
+vtkFiltersModelingModule.h
+/home/richard/gitSource/VTK/Filters/Modeling/vtkFiltersModelingModule.h
+vtkPolyDataAlgorithm.h
+/home/richard/gitSource/VTK/Filters/Modeling/vtkPolyDataAlgorithm.h
+
+/home/richard/gitSource/VTK/Filters/Sources/vtkArrowSource.h
+vtkFiltersSourcesModule.h
+/home/richard/gitSource/VTK/Filters/Sources/vtkFiltersSourcesModule.h
+vtkPolyDataAlgorithm.h
+/home/richard/gitSource/VTK/Filters/Sources/vtkPolyDataAlgorithm.h
 
 /home/richard/gitSource/VTK/IO/Core/vtkAbstractPolyDataReader.h
 vtkIOCoreModule.h
@@ -781,6 +917,16 @@ float.h
 /home/richard/gitSource/VTK_Release_Build/Filters/Core/vtkFiltersCoreModule.h
 vtkAutoInit.h
 /home/richard/gitSource/VTK_Release_Build/Filters/Core/vtkAutoInit.h
+
+/home/richard/gitSource/VTK_Release_Build/Filters/General/vtkFiltersGeneralModule.h
+vtkFiltersCoreModule.h
+/home/richard/gitSource/VTK_Release_Build/Filters/General/vtkFiltersCoreModule.h
+
+/home/richard/gitSource/VTK_Release_Build/Filters/Modeling/vtkFiltersModelingModule.h
+vtkFiltersGeneralModule.h
+/home/richard/gitSource/VTK_Release_Build/Filters/Modeling/vtkFiltersGeneralModule.h
+
+/home/richard/gitSource/VTK_Release_Build/Filters/Sources/vtkFiltersSourcesModule.h
 
 /home/richard/gitSource/VTK_Release_Build/IO/Core/vtkIOCoreModule.h
 

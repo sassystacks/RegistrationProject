@@ -1,9 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cpp.o"
-  "CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cpp.o"
-  "CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cpp.o"
-  "CMakeFiles/FinalProjectMain.dir/main.cpp.o"
-  "CMakeFiles/FinalProjectMain.dir/visualizeData.cpp.o"
+  "CMakeFiles/FinalProjectMain.dir/ApplyRegistration.cxx.o"
+  "CMakeFiles/FinalProjectMain.dir/CommandIterationUpdate.cxx.o"
+  "CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.o"
+  "CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o"
+  "CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.o"
+  "CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.o"
+  "CMakeFiles/FinalProjectMain.dir/main.cxx.o"
   "FinalProjectMain.pdb"
   "FinalProjectMain"
 )

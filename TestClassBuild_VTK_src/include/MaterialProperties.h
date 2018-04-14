@@ -16,12 +16,12 @@ class MaterialProperties {
 private:
 
 	vtkSmartPointer<vtkPolyData> mesh;
-	vtkSmartPointer<vtkMassProperties> massProps;
 
 public:
 
-
-	MaterialProperties();
+	vtkSmartPointer<vtkMassProperties> setMass();
+	double normalizeDeltaVolume(double, double);
+	MaterialProperties(vtkSmartPointer<vtkPolyData>);
 	virtual ~MaterialProperties();
 };
 
