@@ -33,6 +33,14 @@ vtkFillHolesFilter.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkFillHolesFilter.h
 vtkPolyDataNormals.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkPolyDataNormals.h
+vtkIdList.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkIdList.h
+vtkCellCenters.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkCellCenters.h
+vtkCellLocator.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkCellLocator.h
+VisualizeData.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/VisualizeData.h
 iostream
 -
 vector
@@ -49,6 +57,8 @@ vtkArrowSource.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkArrowSource.h
 vtkGlyph3D.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkGlyph3D.h
+vtkCellCenters.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkCellCenters.h
 vector
 -
 
@@ -111,6 +121,8 @@ vtkPointData.h
 -
 vtkSmartPointer.h
 -
+vtkCellLocator.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/vtkCellLocator.h
 
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/ReadWriteImg.h
 vtkPolyData.h
@@ -530,6 +542,12 @@ vtkCommonDataModelModule.h
 vtkObject.h
 /home/richard/gitSource/VTK/Common/DataModel/vtkObject.h
 
+/home/richard/gitSource/VTK/Common/DataModel/vtkAbstractCellLocator.h
+vtkCommonDataModelModule.h
+/home/richard/gitSource/VTK/Common/DataModel/vtkCommonDataModelModule.h
+vtkLocator.h
+/home/richard/gitSource/VTK/Common/DataModel/vtkLocator.h
+
 /home/richard/gitSource/VTK/Common/DataModel/vtkCell.h
 vtkCommonDataModelModule.h
 /home/richard/gitSource/VTK/Common/DataModel/vtkCommonDataModelModule.h
@@ -561,6 +579,12 @@ vtkCommonDataModelModule.h
 /home/richard/gitSource/VTK/Common/DataModel/vtkCommonDataModelModule.h
 vtkAbstractCellLinks.h
 /home/richard/gitSource/VTK/Common/DataModel/vtkAbstractCellLinks.h
+
+/home/richard/gitSource/VTK/Common/DataModel/vtkCellLocator.h
+vtkCommonDataModelModule.h
+/home/richard/gitSource/VTK/Common/DataModel/vtkCommonDataModelModule.h
+vtkAbstractCellLocator.h
+/home/richard/gitSource/VTK/Common/DataModel/vtkAbstractCellLocator.h
 
 /home/richard/gitSource/VTK/Common/DataModel/vtkCellType.h
 
@@ -605,6 +629,12 @@ vtkAbstractArray.h
 /home/richard/gitSource/VTK/Common/DataModel/vtkAbstractArray.h
 
 /home/richard/gitSource/VTK/Common/DataModel/vtkImplicitFunction.h
+vtkCommonDataModelModule.h
+/home/richard/gitSource/VTK/Common/DataModel/vtkCommonDataModelModule.h
+vtkObject.h
+/home/richard/gitSource/VTK/Common/DataModel/vtkObject.h
+
+/home/richard/gitSource/VTK/Common/DataModel/vtkLocator.h
 vtkCommonDataModelModule.h
 /home/richard/gitSource/VTK/Common/DataModel/vtkCommonDataModelModule.h
 vtkObject.h
@@ -693,6 +723,12 @@ vtkFiltersCoreModule.h
 /home/richard/gitSource/VTK/Filters/Core/vtkFiltersCoreModule.h
 vtkPolyDataAlgorithm.h
 /home/richard/gitSource/VTK/Filters/Core/vtkPolyDataAlgorithm.h
+
+/home/richard/gitSource/VTK/Filters/General/vtkCellCenters.h
+vtkFiltersGeneralModule.h
+/home/richard/gitSource/VTK/Filters/General/vtkFiltersGeneralModule.h
+vtkPolyDataAlgorithm.h
+/home/richard/gitSource/VTK/Filters/General/vtkPolyDataAlgorithm.h
 
 /home/richard/gitSource/VTK/Filters/Modeling/vtkFillHolesFilter.h
 vtkFiltersModelingModule.h

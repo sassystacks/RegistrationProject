@@ -11,6 +11,12 @@
 #include "vtkClipPolyData.h"
 #include "vtkFillHolesFilter.h"
 #include "vtkPolyDataNormals.h"
+#include "vtkIdList.h"
+#include "vtkCellCenters.h"
+#include "vtkCellLocator.h"
+
+//remove this
+#include "VisualizeData.h"
 
 #include <iostream>
 #include <vector>
@@ -162,7 +168,7 @@ bool PatchData::isCellNormals(vtkPolyData* polydata)
   return false;
 
 }
-void PatchData::getPointNormals(vtkPolyData* polydata)
+void PatchData::PointNormals(vtkPolyData* polydata)
 {
   std::cout << "In TestPointNormals: " << polydata->GetNumberOfPoints() << std::endl;
   // Try to read normals directly
@@ -208,9 +214,19 @@ void PatchData::getPointNormals(vtkPolyData* polydata)
     std::cout << "Point normals were found!" << std::endl;
     }
 }
+vtkSmartPointer<vtkPolyDataNormals> PatchData::calcNormals(vtkPolyData* polydata)
+{
+	vtkSmartPointer<vtkPolyDataNormals> normalGenerator = vtkSmartPointer<vtkPolyDataNormals>::New();
 
+	    normalGenerator->SetInputData(polydata);
+	    normalGenerator->ComputePointNormalsOff();
+	    normalGenerator->ComputeCellNormalsOn();
+	    normalGenerator->Update();
 
-void PatchData::getCellNormals(vtkPolyData* polydata)
+	    return normalGenerator;
+}
+
+void PatchData::CellNormals(vtkPolyData* polydata)
 {
   // Try to read normals directly
   bool hasCellNormals = isCellNormals(polydata);
@@ -220,15 +236,8 @@ void PatchData::getCellNormals(vtkPolyData* polydata)
     std::cout << "Computing normals..." << std::endl;
 
     // Generate normals
-    vtkSmartPointer<vtkPolyDataNormals> normalGenerator = vtkSmartPointer<vtkPolyDataNormals>::New();
-#if VTK_MAJOR_VERSION <= 5
-    normalGenerator->SetInput(polydata);
-#else
-    normalGenerator->SetInputData(polydata);
-#endif
-    normalGenerator->ComputePointNormalsOff();
-    normalGenerator->ComputeCellNormalsOn();
-    normalGenerator->Update();
+    vtkSmartPointer<vtkPolyDataNormals> normalGen= vtkSmartPointer<vtkPolyDataNormals>::New();
+    normalGen = calcNormals(polydata);
     /*
     // Optional settings
     normalGenerator->SetFeatureAngle(0.1);
@@ -241,13 +250,13 @@ void PatchData::getCellNormals(vtkPolyData* polydata)
     normalGenerator->SetNonManifoldTraversal(1);
     */
 
-    polydata = normalGenerator->GetOutput();
+    polydata = normalGen->GetOutput();
     // Try to read normals again
     hasCellNormals = isCellNormals(polydata);
 
     std::cout << "On the second try, has cell normals? " << hasCellNormals << std::endl;
 
-    setCellNormals(normalGenerator);
+//    setCellNormals(normalGen);
 
     }
   else
@@ -258,7 +267,102 @@ void PatchData::getCellNormals(vtkPolyData* polydata)
 
 
 }
+void PatchData::setCellntersectData(vtkPolyData* pdataReference, vtkPolyData* pdataCurrent)
+{
+	vtkSmartPointer<vtkPolyDataNormals> norms =
+				    vtkSmartPointer<vtkPolyDataNormals>::New();
 
+	 //Try to read normals directly
+	 bool hasCellNormals = isCellNormals(pdataReference);
+
+	if(!hasCellNormals)
+
+	{
+		std::cout << "No Normals Found ..." << std::endl;
+		norms = calcNormals(pdataReference);
+
+
+	}
+
+	else
+	{
+		std::cout << "Normals Found ..." << std::endl;
+		norms->SetInputData(pdataReference);
+	}
+//
+//	pdataReference->GetCellData()->SetNormals(norms);
+
+	vtkSmartPointer<vtkCellCenters> centers = vtkSmartPointer<vtkCellCenters>::New();
+		centers->SetInputConnection(norms->GetOutputPort());
+
+		centers->Update();
+
+//	vtkSmartPointer<vtkCellLocator> cellLocator =
+//		vtkSmartPointer<vtkCellLocator>::New();
+//
+//	cellLocator->SetDataSet(centers->GetOutput());
+//	  cellLocator->BuildLocator();
+
+	  double pCenter[3];
+	  vtkIdType i = 1;
+
+	  centers->GetOutput()->GetPoint(i,pCenter);
+
+
+
+	  std::cout << "The center is: " << pCenter[0] << "," << pCenter[1]
+				<< "," << pCenter[2] << std::endl;
+
+
+	  vtkSmartPointer<vtkFloatArray> normalArray =
+			vtkFloatArray::SafeDownCast(norms->GetOutput()->GetCellData()->GetNormals());
+
+	  double normArray[3];
+
+	  normalArray->GetTuple(i,normArray);
+	  std::cout << "The normal is: " << normArray[0] << "," << normArray[1]
+	  				<< "," << normArray[2] << std::endl;
+
+	//Calculate 2nd Point on line from center of cell
+
+	  double p2[3];
+	  double scalarParam = 10.0;
+
+	  p2[0] = pCenter[0] + normArray[0]*scalarParam;
+	  p2[1] = pCenter[1] + normArray[1]*scalarParam;
+	  p2[2] = pCenter[2] + normArray[2]*scalarParam;
+
+
+
+	vtkSmartPointer<vtkIdList> ids =
+		    vtkSmartPointer<vtkIdList>::New();
+
+	//build cell locator
+	     vtkSmartPointer<vtkCellLocator> locator =
+	      vtkSmartPointer<vtkCellLocator>::New();
+	     locator->SetDataSet(pdataCurrent);
+	     locator->BuildLocator();
+
+
+	double tolerance = 0.0;
+
+	locator->FindCellsAlongLine(pCenter,p2,tolerance,ids);
+
+	double pFind[3];
+
+	vtkIdType j = 0;
+	if(ids->GetNumberOfIds())
+	{
+		std::cout << "Line has " << ids->GetNumberOfIds() << " points." << std::endl;
+//		std::cout << "the id found was : " << ids->GetId(j) << std::endl;
+	}
+	else
+	{
+		std::cout << "No id in container ...." << std::endl;
+	}
+//
+//	pdataCurrent->GetCellData()->GetCell(ids, pFind);
+}
 vtkSmartPointer<vtkPolyData> PatchData::clipSection(vtkSmartPointer<vtkPolyData> pdata)
 {
 	std::cout << "Clipping Data set ..." << std::endl;

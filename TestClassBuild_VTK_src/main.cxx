@@ -26,9 +26,7 @@ int main( int argc, char* argv[] ){
 
 	//visualize the results
 	//input : filename_StaticMesh, filenames_outputfile, filename_centerline
-//	visualizeData visualizer(argv[1],argv[4],argv[3],nPlanes);
-//
-//	visualizer.renderActors();
+
 	ReadWriteImg year1mesh(argv[1]);
 	ReadWriteImg year4mesh(argv[4]);
 	ReadWriteImg centerlineMesh(argv[3]);
@@ -37,29 +35,45 @@ int main( int argc, char* argv[] ){
 	int max = 7;
 
 	PatchData buildPatch(year1mesh.getPdata(),centerlineMesh.getPdata(),min,max,nPlanes);
-//	testPoly = buildPatch.clipSection();
+
 	VisualizeData showData;
 
-	vtkSmartPointer<vtkPolyData> patch = vtkSmartPointer<vtkPolyData>::New();
-	vtkSmartPointer<vtkPolyData> filledPatch = vtkSmartPointer<vtkPolyData>::New();
 
-	patch->DeepCopy(buildPatch.clipSection(year1mesh.getPdata()));
-
-	buildPatch.getCellNormals(patch);
-
-	vtkSmartPointer<vtkFloatArray> fArray = vtkSmartPointer<vtkFloatArray>::New();
-
-
-
-	//	filledPatch = buildPatch.closePatch(patch);
+//	//Make Patch
+//	vtkSmartPointer<vtkPolyData> patch = vtkSmartPointer<vtkPolyData>::New();
+//	vtkSmartPointer<vtkPolyData> filledPatch = vtkSmartPointer<vtkPolyData>::New();
 //
-//	//Show patch
-//	showData.simpleShowPolyData(filledPatch,
-//								buildPatch.clipSection(year4mesh.getPdata()));
+//	//Make a copy of the clipped section as patch
+//	patch->DeepCopy(buildPatch.clipSection(year1mesh.getPdata()));
+//
+//	//Output the details of the normals of the patch to terminal
+//	buildPatch.CellNormals(patch);
+//
+//	//get the Normals of the patch
+//	vtkSmartPointer<vtkPolyDataNormals> norms= vtkSmartPointer<vtkPolyDataNormals>::New();
+//	norms = buildPatch.getCellNormals();
+
+	//show the normals
+//	showData.visualizeNormals(patch,norms);
+//	showData.simpleShowPolyData(patch);
+//	// Double normals in an array
+//	vtkFloatArray* normalDataFloat =
+//			vtkFloatArray::SafeDownCast(patch->GetCellData()->GetArray("Normals"));
+//
+//
+//	showData.visualizeNormals(patch,buildPatch.getCellNormals());
+//		filledPatch = buildPatch.closePatch(patch);
+
+	//Show patch
+
+	//show normal from reference configuration to current configuration
+	buildPatch.setCellntersectData(year1mesh.getPdata(),year4mesh.getPdata());
+
+	//show 2 meshes input
+//	showData.simpleShowPolyData(year4mesh.getPdata(),year1mesh.getPdata());
 
 	//Show full aorta
-//	showData.simpleShowPolyData(year1mesh.getPdata(),
-//								year4mesh.getPdata());
+//	showData.renderActors();
 
 	return 0;
 }

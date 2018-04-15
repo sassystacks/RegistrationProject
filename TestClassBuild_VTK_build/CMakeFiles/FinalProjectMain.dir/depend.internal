@@ -509,6 +509,8 @@ CMakeFiles/FinalProjectMain.dir/MaterialProperties.cxx.o
 CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o
  /home/richard/eclipse-workspace/TestClassBuild_VTK_src/PatchData.cxx
  /home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/PatchData.h
+ /home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/ReadWriteImg.h
+ /home/richard/eclipse-workspace/TestClassBuild_VTK_src/include/VisualizeData.h
  /home/richard/gitSource/VTK/Common/Core/vtkABI.h
  /home/richard/gitSource/VTK/Common/Core/vtkAOSDataArrayTemplate.h
  /home/richard/gitSource/VTK/Common/Core/vtkAbstractArray.h
@@ -516,6 +518,8 @@ CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o
  /home/richard/gitSource/VTK/Common/Core/vtkAtomicTypes.h
  /home/richard/gitSource/VTK/Common/Core/vtkAutoInit.h
  /home/richard/gitSource/VTK/Common/Core/vtkBuffer.h
+ /home/richard/gitSource/VTK/Common/Core/vtkCollection.h
+ /home/richard/gitSource/VTK/Common/Core/vtkCommand.h
  /home/richard/gitSource/VTK/Common/Core/vtkDataArray.h
  /home/richard/gitSource/VTK/Common/Core/vtkDebugLeaksManager.h
  /home/richard/gitSource/VTK/Common/Core/vtkDoubleArray.h
@@ -552,12 +556,15 @@ CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o
  /home/richard/gitSource/VTK/Common/Core/vtkVariantInlineOperators.h
  /home/richard/gitSource/VTK/Common/Core/vtkWeakPointerBase.h
  /home/richard/gitSource/VTK/Common/Core/vtkWin32Header.h
+ /home/richard/gitSource/VTK/Common/Core/vtkWindow.h
  /home/richard/gitSource/VTK/Common/Core/vtkWrappingHints.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkAbstractCellLinks.h
+ /home/richard/gitSource/VTK/Common/DataModel/vtkAbstractCellLocator.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkCell.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkCellArray.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkCellData.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkCellLinks.h
+ /home/richard/gitSource/VTK/Common/DataModel/vtkCellLocator.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkCellType.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkCellTypes.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkDataObject.h
@@ -565,15 +572,41 @@ CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o
  /home/richard/gitSource/VTK/Common/DataModel/vtkDataSetAttributes.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkFieldData.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkImplicitFunction.h
+ /home/richard/gitSource/VTK/Common/DataModel/vtkLocator.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkPlane.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkPointData.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkPointSet.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkPolyData.h
  /home/richard/gitSource/VTK/Common/ExecutionModel/vtkAlgorithm.h
  /home/richard/gitSource/VTK/Common/ExecutionModel/vtkPolyDataAlgorithm.h
+ /home/richard/gitSource/VTK/Common/Misc/vtkContourValues.h
  /home/richard/gitSource/VTK/Filters/Core/vtkClipPolyData.h
+ /home/richard/gitSource/VTK/Filters/Core/vtkCutter.h
  /home/richard/gitSource/VTK/Filters/Core/vtkPolyDataNormals.h
+ /home/richard/gitSource/VTK/Filters/General/vtkCellCenters.h
  /home/richard/gitSource/VTK/Filters/Modeling/vtkFillHolesFilter.h
+ /home/richard/gitSource/VTK/IO/Core/vtkAbstractPolyDataReader.h
+ /home/richard/gitSource/VTK/IO/Geometry/vtkSTLReader.h
+ /home/richard/gitSource/VTK/IO/XML/vtkXMLDataReader.h
+ /home/richard/gitSource/VTK/IO/XML/vtkXMLPolyDataReader.h
+ /home/richard/gitSource/VTK/IO/XML/vtkXMLReader.h
+ /home/richard/gitSource/VTK/IO/XML/vtkXMLUnstructuredDataReader.h
+ /home/richard/gitSource/VTK/Rendering/Core/vtkAbstractMapper.h
+ /home/richard/gitSource/VTK/Rendering/Core/vtkAbstractMapper3D.h
+ /home/richard/gitSource/VTK/Rendering/Core/vtkActor.h
+ /home/richard/gitSource/VTK/Rendering/Core/vtkActorCollection.h
+ /home/richard/gitSource/VTK/Rendering/Core/vtkMapper.h
+ /home/richard/gitSource/VTK/Rendering/Core/vtkPolyDataMapper.h
+ /home/richard/gitSource/VTK/Rendering/Core/vtkProp.h
+ /home/richard/gitSource/VTK/Rendering/Core/vtkProp3D.h
+ /home/richard/gitSource/VTK/Rendering/Core/vtkPropCollection.h
+ /home/richard/gitSource/VTK/Rendering/Core/vtkProperty.h
+ /home/richard/gitSource/VTK/Rendering/Core/vtkRenderWindow.h
+ /home/richard/gitSource/VTK/Rendering/Core/vtkRenderWindowInteractor.h
+ /home/richard/gitSource/VTK/Rendering/Core/vtkRenderer.h
+ /home/richard/gitSource/VTK/Rendering/Core/vtkViewport.h
+ /home/richard/gitSource/VTK/Rendering/Core/vtkVolume.h
+ /home/richard/gitSource/VTK/Rendering/Core/vtkVolumeCollection.h
  /home/richard/gitSource/VTK/Utilities/KWIML/vtkkwiml/abi.h
  /home/richard/gitSource/VTK/Utilities/KWIML/vtkkwiml/include/kwiml/abi.h
  /home/richard/gitSource/VTK/Utilities/KWIML/vtkkwiml/include/kwiml/int.h
@@ -585,9 +618,14 @@ CMakeFiles/FinalProjectMain.dir/PatchData.cxx.o
  /home/richard/gitSource/VTK_Release_Build/Common/Core/vtkVersionMacros.h
  /home/richard/gitSource/VTK_Release_Build/Common/DataModel/vtkCommonDataModelModule.h
  /home/richard/gitSource/VTK_Release_Build/Common/ExecutionModel/vtkCommonExecutionModelModule.h
+ /home/richard/gitSource/VTK_Release_Build/Common/Misc/vtkCommonMiscModule.h
  /home/richard/gitSource/VTK_Release_Build/Filters/Core/vtkFiltersCoreModule.h
  /home/richard/gitSource/VTK_Release_Build/Filters/General/vtkFiltersGeneralModule.h
  /home/richard/gitSource/VTK_Release_Build/Filters/Modeling/vtkFiltersModelingModule.h
+ /home/richard/gitSource/VTK_Release_Build/IO/Core/vtkIOCoreModule.h
+ /home/richard/gitSource/VTK_Release_Build/IO/Geometry/vtkIOGeometryModule.h
+ /home/richard/gitSource/VTK_Release_Build/IO/XML/vtkIOXMLModule.h
+ /home/richard/gitSource/VTK_Release_Build/Rendering/Core/vtkRenderingCoreModule.h
  /home/richard/gitSource/VTK_Release_Build/Utilities/KWIML/vtk_kwiml.h
 CMakeFiles/FinalProjectMain.dir/ReadWriteImg.cxx.o
  /home/richard/eclipse-workspace/TestClassBuild_VTK_src/ReadWriteImg.cxx
@@ -734,6 +772,7 @@ CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.o
  /home/richard/gitSource/VTK/Filters/Core/vtkCutter.h
  /home/richard/gitSource/VTK/Filters/Core/vtkGlyph3D.h
  /home/richard/gitSource/VTK/Filters/Core/vtkPolyDataNormals.h
+ /home/richard/gitSource/VTK/Filters/General/vtkCellCenters.h
  /home/richard/gitSource/VTK/Filters/Sources/vtkArrowSource.h
  /home/richard/gitSource/VTK/IO/Core/vtkAbstractPolyDataReader.h
  /home/richard/gitSource/VTK/IO/Geometry/vtkSTLReader.h
@@ -770,6 +809,7 @@ CMakeFiles/FinalProjectMain.dir/VisualizeData.cxx.o
  /home/richard/gitSource/VTK_Release_Build/Common/ExecutionModel/vtkCommonExecutionModelModule.h
  /home/richard/gitSource/VTK_Release_Build/Common/Misc/vtkCommonMiscModule.h
  /home/richard/gitSource/VTK_Release_Build/Filters/Core/vtkFiltersCoreModule.h
+ /home/richard/gitSource/VTK_Release_Build/Filters/General/vtkFiltersGeneralModule.h
  /home/richard/gitSource/VTK_Release_Build/Filters/Sources/vtkFiltersSourcesModule.h
  /home/richard/gitSource/VTK_Release_Build/IO/Core/vtkIOCoreModule.h
  /home/richard/gitSource/VTK_Release_Build/IO/Geometry/vtkIOGeometryModule.h
@@ -830,10 +870,12 @@ CMakeFiles/FinalProjectMain.dir/main.cxx.o
  /home/richard/gitSource/VTK/Common/Core/vtkWindow.h
  /home/richard/gitSource/VTK/Common/Core/vtkWrappingHints.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkAbstractCellLinks.h
+ /home/richard/gitSource/VTK/Common/DataModel/vtkAbstractCellLocator.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkCell.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkCellArray.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkCellData.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkCellLinks.h
+ /home/richard/gitSource/VTK/Common/DataModel/vtkCellLocator.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkCellType.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkCellTypes.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkDataObject.h
@@ -841,6 +883,7 @@ CMakeFiles/FinalProjectMain.dir/main.cxx.o
  /home/richard/gitSource/VTK/Common/DataModel/vtkDataSetAttributes.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkFieldData.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkImplicitFunction.h
+ /home/richard/gitSource/VTK/Common/DataModel/vtkLocator.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkPlane.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkPointData.h
  /home/richard/gitSource/VTK/Common/DataModel/vtkPointSet.h

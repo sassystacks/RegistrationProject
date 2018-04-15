@@ -8,6 +8,7 @@
 #include "VisualizeData.h"
 #include "vtkArrowSource.h"
 #include "vtkGlyph3D.h"
+#include "vtkCellCenters.h"
 #include <vector>
 
 VisualizeData::VisualizeData(vtkSmartPointer<vtkPolyData> staticMesh,vtkSmartPointer<vtkPolyData> dynamicMesh,
@@ -212,7 +213,7 @@ void VisualizeData::simpleShowPolyData(vtkSmartPointer<vtkPolyData> pdat1,
 										vtkSmartPointer<vtkPolyData> pdat2){
 	float pArray1[3] = {0.1,0.3,0.9};
 	float op1 = 1.0;
-	float pArray2[3] = {0.1,0.3,0.9};
+	float pArray2[3] = {0.9,0.35,0.2};
 	float op2 = 1.0;
 
 	vtkSmartPointer<vtkActor> actor1 = getActor(pdat1,pArray1,op1);
@@ -247,6 +248,8 @@ void VisualizeData::visualizeNormals(vtkPolyData* pdata, vtkPolyDataNormals* pda
 
 	float pArray1[3] = {0.1,0.3,0.9};
 	float op1 = 1.0;
+	float pArray2[3] = {0.9,0.3,0.1};
+	float op2 = 0.3;
 
 
 	vtkSmartPointer<vtkArrowSource> arrow = vtkSmartPointer<vtkArrowSource>::New();
@@ -255,16 +258,21 @@ void VisualizeData::visualizeNormals(vtkPolyData* pdata, vtkPolyDataNormals* pda
 
 	vtkSmartPointer<vtkGlyph3D> glyph = vtkSmartPointer<vtkGlyph3D>::New();
 
-	glyph->SetInputData(pdataNormals->GetOutput());
+	vtkSmartPointer<vtkCellCenters> centers = vtkSmartPointer<vtkCellCenters>::New();
+	centers->SetInputConnection(pdataNormals->GetOutputPort());
+
+	centers->Update();
+
+	glyph->SetInputConnection(centers->GetOutputPort());
 	glyph->SetSourceData(arrow->GetOutput());
 	glyph->SetVectorModeToUseNormal();
 	glyph->SetScaleModeToScaleByVector();
-	glyph->SetScaleFactor(1);
+	glyph->SetScaleFactor(.01);
 	glyph->OrientOn();
 	glyph->Update();
 
 	vtkSmartPointer<vtkActor> actor1 = getActor(pdata,pArray1,op1);
-	vtkSmartPointer<vtkActor> actor2 =getActor(glyph->GetOutput(),pArray1,op1);
+	vtkSmartPointer<vtkActor> actor2 = getActor(glyph->GetOutput(),pArray2,op2);
 	vtkSmartPointer<vtkRenderWindow> renWin = vtkSmartPointer<vtkRenderWindow>::New();
 
 	renWin->SetSize(400, 400);
