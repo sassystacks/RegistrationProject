@@ -25,9 +25,13 @@ private:
 
 	vtkSmartPointer<vtkPolyData> staticMesh;
 	vtkSmartPointer<vtkPolyData> centerlineData;
+	vtkSmartPointer<vtkPolyData> deformationData;
+
 	int patchMin;
 	int patchMax;
 	int numPlanes;
+
+	float maxDeformation;
 
 	vtkSmartPointer<vtkFloatArray> patchFarray;
 	vtkSmartPointer<vtkDoubleArray> patchDarray;
@@ -54,12 +58,16 @@ public:
 	void setPointNormals(vtkSmartPointer<vtkPolyDataNormals> pNorms){pointNormals = pNorms;}
 	void setCellNormals(vtkSmartPointer<vtkPolyDataNormals> cNorms){cellNormals = cNorms;}
 	void setCellntersectData(vtkPolyData*, vtkPolyData*);
+	void setDeformationData(vtkPolyData* pdata){deformationData= pdata;}
+	void setDeformationMax(double def){maxDeformation=def;}
 
 	//Get Data
 	vtkSmartPointer<vtkPolyDataNormals> getPointNormals(){return pointNormals;}
 	vtkSmartPointer<vtkPolyDataNormals> getCellNormals(){return cellNormals;}
 	vtkSmartPointer<vtkCellLocator> getCellIntersectData(){return cellintersect;}
 	vtkSmartPointer<vtkPolyDataNormals> calcNormals(vtkPolyData*);
+	vtkSmartPointer<vtkPolyData> getdeformationData(){return deformationData;}
+	float getDeformationMax(){return maxDeformation;}
 
 	//does data exist?
 	bool isPointNormals(vtkPolyData*);

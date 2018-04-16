@@ -14,6 +14,8 @@
 #include "vtkIdList.h"
 #include "vtkCellCenters.h"
 #include "vtkCellLocator.h"
+#include "vtkMath.h"
+
 
 //remove this
 #include "VisualizeData.h"
@@ -269,18 +271,24 @@ void PatchData::CellNormals(vtkPolyData* polydata)
 }
 void PatchData::setCellntersectData(vtkPolyData* pdataReference, vtkPolyData* pdataCurrent)
 {
+	vtkSmartPointer<vtkPolyData> copyRef =
+					    vtkSmartPointer<vtkPolyData>::New();
+
+	//Copy Reference Polydata to apply scalars later
+	copyRef->DeepCopy(pdataReference);
+
 	vtkSmartPointer<vtkPolyDataNormals> norms =
 				    vtkSmartPointer<vtkPolyDataNormals>::New();
 
 	 //Try to read normals directly
 	 bool hasCellNormals = isCellNormals(pdataReference);
 
+	//Check if the polydata has normals
 	if(!hasCellNormals)
 
 	{
 		std::cout << "No Normals Found ..." << std::endl;
 		norms = calcNormals(pdataReference);
-
 
 	}
 
@@ -289,79 +297,124 @@ void PatchData::setCellntersectData(vtkPolyData* pdataReference, vtkPolyData* pd
 		std::cout << "Normals Found ..." << std::endl;
 		norms->SetInputData(pdataReference);
 	}
-//
-//	pdataReference->GetCellData()->SetNormals(norms);
 
-	vtkSmartPointer<vtkCellCenters> centers = vtkSmartPointer<vtkCellCenters>::New();
-		centers->SetInputConnection(norms->GetOutputPort());
+	//flip Normals to point toward the current configuration
+	norms->FlipNormalsOn();
+	norms->Update();
 
-		centers->Update();
+	//Get the centers of the reference configuration cells
+	vtkSmartPointer<vtkCellCenters> centersRef = vtkSmartPointer<vtkCellCenters>::New();
 
-//	vtkSmartPointer<vtkCellLocator> cellLocator =
-//		vtkSmartPointer<vtkCellLocator>::New();
-//
-//	cellLocator->SetDataSet(centers->GetOutput());
-//	  cellLocator->BuildLocator();
+	centersRef->SetInputConnection(norms->GetOutputPort());
+	centersRef->Update();
 
-	  double pCenter[3];
-	  vtkIdType i = 1;
+	//Get the array of all the normals for the reference configuration
+	vtkSmartPointer<vtkFloatArray> normalArray =
+		vtkFloatArray::SafeDownCast(norms->GetOutput()->GetCellData()->GetNormals());
 
-	  centers->GetOutput()->GetPoint(i,pCenter);
-
-
-
-	  std::cout << "The center is: " << pCenter[0] << "," << pCenter[1]
-				<< "," << pCenter[2] << std::endl;
-
-
-	  vtkSmartPointer<vtkFloatArray> normalArray =
-			vtkFloatArray::SafeDownCast(norms->GetOutput()->GetCellData()->GetNormals());
-
-	  double normArray[3];
-
-	  normalArray->GetTuple(i,normArray);
-	  std::cout << "The normal is: " << normArray[0] << "," << normArray[1]
-	  				<< "," << normArray[2] << std::endl;
-
-	//Calculate 2nd Point on line from center of cell
-
-	  double p2[3];
-	  double scalarParam = 10.0;
-
-	  p2[0] = pCenter[0] + normArray[0]*scalarParam;
-	  p2[1] = pCenter[1] + normArray[1]*scalarParam;
-	  p2[2] = pCenter[2] + normArray[2]*scalarParam;
-
-
-
+	//id list to store the centers being used to calculate the deformation
 	vtkSmartPointer<vtkIdList> ids =
-		    vtkSmartPointer<vtkIdList>::New();
+			vtkSmartPointer<vtkIdList>::New();
 
 	//build cell locator
-	     vtkSmartPointer<vtkCellLocator> locator =
-	      vtkSmartPointer<vtkCellLocator>::New();
-	     locator->SetDataSet(pdataCurrent);
-	     locator->BuildLocator();
+	vtkSmartPointer<vtkCellLocator> locator =
+			vtkSmartPointer<vtkCellLocator>::New();
 
+	//Add the current Configuration to the cell locator
+	locator->SetDataSet(pdataCurrent);
+	locator->BuildLocator();
 
+	//initialize cell centers for the current configuration
+	vtkSmartPointer<vtkCellCenters> centers_Current = vtkSmartPointer<vtkCellCenters>::New();
+
+	//set the current configuration to the cell centers
+	centers_Current->SetInputData(pdataCurrent);
+	centers_Current->Update();
+
+	vtkSmartPointer<vtkFloatArray> scalars =
+	    vtkSmartPointer<vtkFloatArray>::New();
+
+	scalars->SetNumberOfValues(normalArray->GetNumberOfTuples());
+	//set tolerance for finding cells on line
 	double tolerance = 0.0;
 
-	locator->FindCellsAlongLine(pCenter,p2,tolerance,ids);
+	//this will be checked in each iteration to determine the range of scalars
+	double maxDistance = 0.0;
 
-	double pFind[3];
+	//For loop to find all cells that have a normal intersection with the current configuration
+	for (vtkIdType i = 0; i<normalArray->GetNumberOfTuples(); i++)
+	{
+		//Create Arrays to store data in each loop
+		double normArray[3];
+		double pCenter[3];
+		double pNorm[3];
+		double pCurrent[3];
+		double scalarParam = 0.05;
 
-	vtkIdType j = 0;
-	if(ids->GetNumberOfIds())
-	{
-		std::cout << "Line has " << ids->GetNumberOfIds() << " points." << std::endl;
-//		std::cout << "the id found was : " << ids->GetId(j) << std::endl;
+		//get the centers of the reference configuration
+		centersRef->GetOutput()->GetPoint(i,pCenter);
+
+		//Get the array describing the normal direction from the cell
+		normalArray->GetTuple(i,normArray);
+
+		//Use the relationship t*(l,m,n)=(x_1-x0,y_1-y_0,z_1-z_0) to get second point on the line
+		pNorm[0] = pCenter[0] + normArray[0]*scalarParam;
+		pNorm[1] = pCenter[1] + normArray[1]*scalarParam;
+		pNorm[2] = pCenter[2] + normArray[2]*scalarParam;
+
+		//Find the cells that intersect with the line
+		locator->FindCellsAlongLine(pCenter,pNorm,tolerance,ids);
+
+
+		//		  std::cout << "The center is: " << pCenter[0] << "," << pCenter[1]
+		//					<< "," << pCenter[2] << std::endl;
+
+		//distance total will be the average of all distances found in the calculation
+		double distanceTotal=0;
+
+		//loop through all of the ids that intersected with the normal line
+		for(vtkIdType k = 0; k < ids->GetNumberOfIds(); k++)
+		{
+			//get the center point of the current configuration
+			centers_Current->GetOutput()->GetPoint(k,pCurrent);
+
+			//find the distance from one configuration to the other
+			double squaredDistance = vtkMath::Distance2BetweenPoints(pCenter, pCurrent);
+
+			// Take the square root to get the Euclidean distance between the points.
+			double distance = sqrt(squaredDistance);
+
+			if (distance>maxDistance)
+			{
+				maxDistance=distance;
+			}
+
+			//Get the average distance from each point to the reference configuration
+			distanceTotal = float((distanceTotal+distance)/(k+1));
+
+			//std::cout << "the distance at " << ids->GetId(k) << " id found was : " << distance << std::endl;
+		}
+
+	//Add the new distance to the double array for scalars
+	scalars->SetValue(i,distanceTotal);
+
 	}
-	else
-	{
-		std::cout << "No id in container ...." << std::endl;
-	}
-//
-//	pdataCurrent->GetCellData()->GetCell(ids, pFind);
+
+	//Set the scalar values to the cells in the reference configuration
+	copyRef->GetCellData()->SetScalars(scalars);
+
+	//set the polyData
+	setDeformationData(copyRef);
+
+	//Set the maximum distance value for the range of deformation
+	setDeformationMax((float)maxDistance);
+
+	std::cout << "The maximimum deformed distance was: " << maxDistance << std::endl;
+
+	//remove later ~~~~~~~ Visualize the output of this function
+	VisualizeData Test;
+
+	Test.visualizeDeformationData(copyRef,maxDistance);
 }
 vtkSmartPointer<vtkPolyData> PatchData::clipSection(vtkSmartPointer<vtkPolyData> pdata)
 {

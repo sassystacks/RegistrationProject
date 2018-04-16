@@ -39,6 +39,8 @@ vtkCellCenters.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkCellCenters.h
 vtkCellLocator.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkCellLocator.h
+vtkMath.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkMath.h
 VisualizeData.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/VisualizeData.h
 iostream
@@ -59,6 +61,18 @@ vtkGlyph3D.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkGlyph3D.h
 vtkCellCenters.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkCellCenters.h
+vtkLineSource.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkLineSource.h
+vtkIdList.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkIdList.h
+vtkLookupTable.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkLookupTable.h
+vtkColorTransferFunction.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkColorTransferFunction.h
+vtkColorSeries.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkColorSeries.h
+vtkScalarBarActor.h
+/home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkScalarBarActor.h
 vector
 -
 
@@ -173,6 +187,16 @@ PatchData.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/PatchData.h
 vtkFloatArray.h
 /home/richard/eclipse-workspace/TestClassBuild_VTK_src/vtkFloatArray.h
+
+/home/richard/gitSource/VTK/Common/Color/vtkColorSeries.h
+vtkCommonColorModule.h
+/home/richard/gitSource/VTK/Common/Color/vtkCommonColorModule.h
+vtkObject.h
+/home/richard/gitSource/VTK/Common/Color/vtkObject.h
+vtkColor.h
+/home/richard/gitSource/VTK/Common/Color/vtkColor.h
+vtkStdString.h
+/home/richard/gitSource/VTK/Common/Color/vtkStdString.h
 
 /home/richard/gitSource/VTK/Common/Core/vtkABI.h
 
@@ -332,6 +356,14 @@ vtkDataArray.h
 vtkAOSDataArrayTemplate.h
 /home/richard/gitSource/VTK/Common/Core/vtkAOSDataArrayTemplate.h
 
+/home/richard/gitSource/VTK/Common/Core/vtkLookupTable.h
+vtkCommonCoreModule.h
+/home/richard/gitSource/VTK/Common/Core/vtkCommonCoreModule.h
+vtkScalarsToColors.h
+/home/richard/gitSource/VTK/Common/Core/vtkScalarsToColors.h
+vtkUnsignedCharArray.h
+/home/richard/gitSource/VTK/Common/Core/vtkUnsignedCharArray.h
+
 /home/richard/gitSource/VTK/Common/Core/vtkMath.h
 vtkCommonCoreModule.h
 /home/richard/gitSource/VTK/Common/Core/vtkCommonCoreModule.h
@@ -393,6 +425,14 @@ vtkObject.h
 /home/richard/gitSource/VTK/Common/Core/vtkObject.h
 vtkDataArray.h
 /home/richard/gitSource/VTK/Common/Core/vtkDataArray.h
+
+/home/richard/gitSource/VTK/Common/Core/vtkScalarsToColors.h
+vtkCommonCoreModule.h
+/home/richard/gitSource/VTK/Common/Core/vtkCommonCoreModule.h
+vtkVariant.h
+/home/richard/gitSource/VTK/Common/Core/vtkVariant.h
+vtkObject.h
+/home/richard/gitSource/VTK/Common/Core/vtkObject.h
 
 /home/richard/gitSource/VTK/Common/Core/vtkSetGet.h
 vtkCommonCoreModule.h
@@ -602,6 +642,12 @@ vtkUnsignedCharArray.h
 vtkCellType.h
 /home/richard/gitSource/VTK/Common/DataModel/vtkCellType.h
 
+/home/richard/gitSource/VTK/Common/DataModel/vtkColor.h
+vtkTuple.h
+/home/richard/gitSource/VTK/Common/DataModel/vtkTuple.h
+vtkObject.h
+/home/richard/gitSource/VTK/Common/DataModel/vtkObject.h
+
 /home/richard/gitSource/VTK/Common/DataModel/vtkDataObject.h
 vtkCommonDataModelModule.h
 /home/richard/gitSource/VTK/Common/DataModel/vtkCommonDataModelModule.h
@@ -686,6 +732,18 @@ vtkAlgorithm.h
 vtkPolyData.h
 /home/richard/gitSource/VTK/Common/ExecutionModel/vtkPolyData.h
 
+/home/richard/gitSource/VTK/Common/Math/vtkTuple.h
+vtkIOStream.h
+/home/richard/gitSource/VTK/Common/Math/vtkIOStream.h
+vtkSystemIncludes.h
+/home/richard/gitSource/VTK/Common/Math/vtkSystemIncludes.h
+cassert
+-
+cstdlib
+-
+cmath
+-
+
 /home/richard/gitSource/VTK/Common/Misc/vtkContourValues.h
 vtkCommonMiscModule.h
 /home/richard/gitSource/VTK/Common/Misc/vtkCommonMiscModule.h
@@ -742,6 +800,12 @@ vtkFiltersSourcesModule.h
 vtkPolyDataAlgorithm.h
 /home/richard/gitSource/VTK/Filters/Sources/vtkPolyDataAlgorithm.h
 
+/home/richard/gitSource/VTK/Filters/Sources/vtkLineSource.h
+vtkFiltersSourcesModule.h
+/home/richard/gitSource/VTK/Filters/Sources/vtkFiltersSourcesModule.h
+vtkPolyDataAlgorithm.h
+/home/richard/gitSource/VTK/Filters/Sources/vtkPolyDataAlgorithm.h
+
 /home/richard/gitSource/VTK/IO/Core/vtkAbstractPolyDataReader.h
 vtkIOCoreModule.h
 /home/richard/gitSource/VTK/IO/Core/vtkIOCoreModule.h
@@ -780,6 +844,12 @@ vtkIOXMLModule.h
 vtkXMLDataReader.h
 /home/richard/gitSource/VTK/IO/XML/vtkXMLDataReader.h
 
+/home/richard/gitSource/VTK/Rendering/Annotation/vtkScalarBarActor.h
+vtkRenderingAnnotationModule.h
+/home/richard/gitSource/VTK/Rendering/Annotation/vtkRenderingAnnotationModule.h
+vtkActor2D.h
+/home/richard/gitSource/VTK/Rendering/Annotation/vtkActor2D.h
+
 /home/richard/gitSource/VTK/Rendering/Core/vtkAbstractMapper.h
 vtkRenderingCoreModule.h
 /home/richard/gitSource/VTK/Rendering/Core/vtkRenderingCoreModule.h
@@ -798,6 +868,14 @@ vtkRenderingCoreModule.h
 vtkProp3D.h
 /home/richard/gitSource/VTK/Rendering/Core/vtkProp3D.h
 
+/home/richard/gitSource/VTK/Rendering/Core/vtkActor2D.h
+vtkRenderingCoreModule.h
+/home/richard/gitSource/VTK/Rendering/Core/vtkRenderingCoreModule.h
+vtkProp.h
+/home/richard/gitSource/VTK/Rendering/Core/vtkProp.h
+vtkCoordinate.h
+/home/richard/gitSource/VTK/Rendering/Core/vtkCoordinate.h
+
 /home/richard/gitSource/VTK/Rendering/Core/vtkActorCollection.h
 vtkRenderingCoreModule.h
 /home/richard/gitSource/VTK/Rendering/Core/vtkRenderingCoreModule.h
@@ -805,6 +883,18 @@ vtkPropCollection.h
 /home/richard/gitSource/VTK/Rendering/Core/vtkPropCollection.h
 vtkActor.h
 /home/richard/gitSource/VTK/Rendering/Core/vtkActor.h
+
+/home/richard/gitSource/VTK/Rendering/Core/vtkColorTransferFunction.h
+vtkRenderingCoreModule.h
+/home/richard/gitSource/VTK/Rendering/Core/vtkRenderingCoreModule.h
+vtkScalarsToColors.h
+/home/richard/gitSource/VTK/Rendering/Core/vtkScalarsToColors.h
+
+/home/richard/gitSource/VTK/Rendering/Core/vtkCoordinate.h
+vtkRenderingCoreModule.h
+/home/richard/gitSource/VTK/Rendering/Core/vtkRenderingCoreModule.h
+vtkObject.h
+/home/richard/gitSource/VTK/Rendering/Core/vtkObject.h
 
 /home/richard/gitSource/VTK/Rendering/Core/vtkMapper.h
 vtkRenderingCoreModule.h
@@ -914,6 +1004,8 @@ inttypes.h
 include/kwiml/int.h
 /home/richard/gitSource/VTK/Utilities/KWIML/vtkkwiml/include/kwiml/int.h
 
+/home/richard/gitSource/VTK_Release_Build/Common/Color/vtkCommonColorModule.h
+
 /home/richard/gitSource/VTK_Release_Build/Common/Core/vtkAtomic.h
 vtkCommonCoreModule.h
 /home/richard/gitSource/VTK_Release_Build/Common/Core/vtkCommonCoreModule.h
@@ -971,6 +1063,10 @@ vtkAutoInit.h
 /home/richard/gitSource/VTK_Release_Build/IO/Geometry/vtkAutoInit.h
 
 /home/richard/gitSource/VTK_Release_Build/IO/XML/vtkIOXMLModule.h
+
+/home/richard/gitSource/VTK_Release_Build/Rendering/Annotation/vtkRenderingAnnotationModule.h
+vtkRenderingCoreModule.h
+/home/richard/gitSource/VTK_Release_Build/Rendering/Annotation/vtkRenderingCoreModule.h
 
 /home/richard/gitSource/VTK_Release_Build/Rendering/Core/vtkRenderingCoreModule.h
 vtkFiltersCoreModule.h

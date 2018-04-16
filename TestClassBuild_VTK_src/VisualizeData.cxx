@@ -9,6 +9,13 @@
 #include "vtkArrowSource.h"
 #include "vtkGlyph3D.h"
 #include "vtkCellCenters.h"
+#include "vtkLineSource.h"
+#include "vtkIdList.h"
+#include "vtkLookupTable.h"
+#include "vtkColorTransferFunction.h"
+#include "vtkColorSeries.h"
+#include "vtkScalarBarActor.h"
+
 #include <vector>
 
 VisualizeData::VisualizeData(vtkSmartPointer<vtkPolyData> staticMesh,vtkSmartPointer<vtkPolyData> dynamicMesh,
@@ -273,6 +280,7 @@ void VisualizeData::visualizeNormals(vtkPolyData* pdata, vtkPolyDataNormals* pda
 
 	vtkSmartPointer<vtkActor> actor1 = getActor(pdata,pArray1,op1);
 	vtkSmartPointer<vtkActor> actor2 = getActor(glyph->GetOutput(),pArray2,op2);
+
 	vtkSmartPointer<vtkRenderWindow> renWin = vtkSmartPointer<vtkRenderWindow>::New();
 
 	renWin->SetSize(400, 400);
@@ -295,6 +303,123 @@ void VisualizeData::visualizeNormals(vtkPolyData* pdata, vtkPolyDataNormals* pda
 	renWin->Render();
 	iRen->Start();
 }
+void VisualizeData::visualizeNormalPath(vtkPolyData* ref, vtkPolyData* current,
+										double p0[3] , double p1[3])
+
+{
+	vtkSmartPointer<vtkLineSource> lineSource =
+		    vtkSmartPointer<vtkLineSource>::New();
+		  lineSource->SetPoint1(p0);
+		  lineSource->SetPoint2(p1);
+		  lineSource->Update();
+
+	float pArray1[3] = {0.1,0.3,0.9};
+	float op1 = 0.3;
+	float pArray2[3] = {0.9,0.3,0.1};
+	float op2 = 0.8;
+	float pArray3[3] = {1.0,1.0,1.0};
+	float op3 = 1;
+
+	vtkSmartPointer<vtkActor> actor1 = getActor(ref,pArray1,op1);
+	vtkSmartPointer<vtkActor> actor2 = getActor(current,pArray2,op2);
+	vtkSmartPointer<vtkActor> actor3 = getActor(lineSource->GetOutput(),pArray3,op3);
+
+	vtkSmartPointer<vtkRenderWindow> renWin = vtkSmartPointer<vtkRenderWindow>::New();
+
+	renWin->SetSize(400, 400);
+	renWin->SetWindowName("Cell3D Demonstration");
+
+	vtkSmartPointer<vtkRenderWindowInteractor> iRen =
+			vtkSmartPointer<vtkRenderWindowInteractor>::New();
+
+	iRen->SetRenderWindow(renWin);
+
+	vtkSmartPointer<vtkRenderer> renderer = vtkSmartPointer<vtkRenderer>::New();
+
+	renderer->AddActor(actor1);
+	renderer->AddActor(actor2);
+	renderer->AddActor(actor3);
+
+
+
+	renWin->AddRenderer(renderer);
+
+	std::cout << "Starting Render Window .... " << std::endl;
+	//Render and interact
+	renWin->Render();
+	iRen->Start();
+
+}
+void VisualizeData::visualizeDeformationData(vtkPolyData* ref, float maxDeform)
+
+{
+	double scalarRange[2] = {0.0,maxDeform};
+
+	//lookupTable->Build();
+
+	// Build a lookup table
+	vtkSmartPointer<vtkColorSeries> colorSeries =  vtkSmartPointer<vtkColorSeries>::New();
+	colorSeries->SetColorScheme(vtkColorSeries::BREWER_DIVERGING_PURPLE_ORANGE_7);
+
+	vtkSmartPointer<vtkColorTransferFunction> lut =
+	vtkSmartPointer<vtkColorTransferFunction>::New();
+	lut->SetColorSpaceToHSV();
+
+	// Use a color series to create a transfer function
+	int numColors = colorSeries->GetNumberOfColors();
+
+	for (int i = 0; i < numColors; i++)
+	{
+		vtkColor3ub color = colorSeries->GetColor(i);
+		double dColor[3];
+		dColor[0] = static_cast<double> (color[0]) / 255.0;
+		dColor[1] = static_cast<double> (color[1]) / 255.0;
+		dColor[2] = static_cast<double> (color[2]) / 255.0;
+		double t = scalarRange[0] + (scalarRange[1] - scalarRange[0])
+		/ (numColors - 1) * i;
+		lut->AddRGBPoint(t, dColor[0], dColor[1], dColor[2]);
+	}
+
+	// Create a mapper and actor
+	vtkSmartPointer<vtkPolyDataMapper> mapper =
+	  vtkSmartPointer<vtkPolyDataMapper>::New();
+	mapper->SetInputData(ref);
+	mapper->SetLookupTable(lut);
+	mapper->SetScalarRange(scalarRange);
+
+	vtkSmartPointer<vtkActor> actor =
+	  vtkSmartPointer<vtkActor>::New();
+	actor->SetMapper(mapper);
+
+	// Create a scalar bar
+	vtkSmartPointer<vtkScalarBarActor> scalarBar =
+	  vtkSmartPointer<vtkScalarBarActor>::New();
+	scalarBar->SetLookupTable(mapper->GetLookupTable());
+	scalarBar->SetTitle("Deformation Gradient");
+	scalarBar->SetNumberOfLabels(5);
+
+	// Create a renderer, render window, and interactor
+	vtkSmartPointer<vtkRenderer> renderer =
+	  vtkSmartPointer<vtkRenderer>::New();
+	vtkSmartPointer<vtkRenderWindow> renderWindow =
+	  vtkSmartPointer<vtkRenderWindow>::New();
+	renderWindow->AddRenderer(renderer);
+	vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor =
+	  vtkSmartPointer<vtkRenderWindowInteractor>::New();
+	renderWindowInteractor->SetRenderWindow(renderWindow);
+
+	// Add the actors to the scene
+	renderer->AddActor(actor);
+	renderer->AddActor2D(scalarBar);
+
+	renderer->SetBackground(.1, .2, .3); // Background color blue
+
+	// Render and interact
+	renderWindow->Render();
+	renderWindowInteractor->Start();
+
+}
+
 
 VisualizeData::~VisualizeData() {
 	// TODO Auto-generated destructor stub

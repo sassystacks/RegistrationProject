@@ -53,6 +53,8 @@ public:
 	VisualizeData(vtkSmartPointer<vtkPolyData>,vtkSmartPointer<vtkPolyData>
 					,vtkSmartPointer<vtkPolyData>, int);
 	void visualizeNormals(vtkPolyData*, vtkPolyDataNormals*);
+	void visualizeNormalPath(vtkPolyData*, vtkPolyData*,double[3], double[3]);
+	void visualizeDeformationData(vtkPolyData*,float);
 		//:staticMesh(fnameStaticMesh),
 //			dynamicMesh(fnameDynamicMesh),
 //			centerlineData(fnameCenterLineData);
